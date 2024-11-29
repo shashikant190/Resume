@@ -1,0 +1,328 @@
+/* General header styles */
+header {
+    text-align: center;
+    background: #007acc;
+    color: white;
+    padding: 20px 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Centering the role */
+.role1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    color: #f4f4f9;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for alignment in contact-info and additional-info */
+.contact-info,
+.additional-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 1em;
+}
+
+/* Styling for links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Icon styles */
+i {
+    color: #f9f9f9; /* Icon color */
+    margin-right: 5px;
+}
+
+/* ================================ Education Section ===================================== */
+
+/* Styling for education entries */
+.education-entry {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.left {
+    text-align: left;
+    flex: 2;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    flex: 1;
+}
+
+.course {
+    margin-top: 5px;
+    font-style: italic;
+    color: #333;
+}
+
+.cgpa {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+/* HR Styling (Blue Line) */
+hr {
+    border: 0;
+    height: 1px;
+    background: #007acc;
+    margin: 20px 0;
+}
+
+
+/* ================================ Technical Skills Section ===================================== */
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section li {
+    margin: 10px 0;
+}
+
+/* ================================ Experience Section ===================================== */
+
+/* Styling for experience entries */
+.experience-entry {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.left {
+    text-align: left;
+    flex: 2;
+}
+
+.center {
+    text-align: center;
+    flex: 1;
+}
+
+.role {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #333;
+    text-align: left;
+}
+
+.details {
+    margin-top: 5px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* HR Styling (Blue Line) */
+hr {
+    border: 0;
+    height: 1px;
+    background: #007acc;
+    margin: 20px 0;
+}
+
+
+/* ================================ Projects Section ===================================== */
+
+/* Styling for project entries */
+.project-entry,
+.certificate-entry {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.left {
+    text-align: left;
+    flex: 2;
+}
+
+.center {
+    text-align: center;
+    flex: 1;
+}
+
+.details,
+.issuer {
+    margin-top: 5px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.details {
+    margin-left: 0;
+}
+
+.issuer {
+    font-style: italic;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* HR Styling (Blue Line) */
+hr {
+    border: 0;
+    height: 1px;
+    background: #007acc;
+    margin: 20px 0;
+}
+
+
+/* ================================ Print-specific Styles ===================================== */
+
+/* Ensures everything is formatted properly when printing */
+@media print {
+
+    /* General body styles */
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 0.75em;  /* Reduced overall font size */
+    }
+
+    /* Header and blue background for print */
+    header {
+        page-break-before: always;  /* Ensures header starts on the first page */
+    }
+
+    /* Prevent sections from breaking between pages */
+    section, .row, .certificate-entry, .project-entry, .experience-entry, .education-entry {
+        page-break-inside: avoid;  /* Prevents breaking within sections */
+    }
+
+    /* Hide buttons and unnecessary elements for print */
+    .buttons {
+        display: none;  /* Hide the buttons when printing */
+    }
+
+    /* Adjust heading sizes */
+    h1 {
+        font-size: 1.5em;  /* Reduced size for h1 */
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 1.1em;  /* Reduced size for h2 */
+        margin-bottom: 5px;
+    }
+
+    .role1 {
+        font-size: 1em;  /* Adjust the role font size */
+    }
+
+    /* Reduce margins for sections to fit content */
+    section, .education-entry, .experience-entry, .project-entry, .certificate-entry {
+        margin-bottom: 10px;  /* Reduced margin between sections */
+    }
+
+    /* Smaller font size for details and other text */
+    .details, .issuer, .course, .role {
+        font-size: 0.75em;  /* Smaller font size for these details */
+        margin-top: 3px;
+        line-height: 1.4;
+    }
+
+    .course {
+        font-style: italic;
+        color: #333;
+    }
+
+    .role {
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    /* Adjust font size for project and certificate entries */
+    .project-entry .left, .certificate-entry .left {
+        font-size: 0.85em;
+    }
+
+    .project-entry .center, .certificate-entry .center {
+        font-size: 0.75em;
+    }
+
+    /* Ensure the entire page fits */
+    .container {
+        width: 100%;
+    }
+
+    /* Adjust the overall page scaling to fit on one page */
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .contact-info, .additional-info {
+        font-size: 0.75em;  /* Reduced size of contact info for print */
+    }
+
+    .details {
+        font-size: 0.7em;  /* Even smaller font size for details */
+    }
+
+    .education-entry, .experience-entry, .project-entry, .certificate-entry {
+        margin-bottom: 10px;
+    }
+
+    /* Force the page to fit */
+    @page {
+        size: A4;  /* Ensure A4 paper size */
+        margin: 10mm; /* Reduced margin to fit content */
+    }
+
+    /* Ensure HR lines and background color for headings in print */
+    hr {
+        border: 0;
+        height: 1px;
+        background: #007acc;  /* Ensure blue line is visible */
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        background: #007acc;  /* Blue background for headings */
+        color: white;
+        padding: 5px;
+    }
+}
